@@ -1,10 +1,10 @@
 :root {
     --bg-color: #1a1a1a;
     --text-color: #ffffff;
-    --primary-color: #6366f1;
-    --secondary-color: #4f46e5;
+    --primary-color: #00EEFF;
+    --secondary-color: #00EEFF;
     --card-bg: #2a2a2a;
-    --hover-color: #7c3aed;
+    --hover-color: #6366f1;
     --border-radius: 8px;
 }
 
@@ -245,6 +245,11 @@ body {
     font-family: 'Fira Code', monospace;
 }
 
+iframe {
+    width: 48vw;
+    height: 60vh;
+}
+
 /* Navigation Buttons */
 .navigation-buttons {
     display: flex;
@@ -255,7 +260,7 @@ body {
 
 .nav-button {
     padding: 0.8rem 1.5rem;
-    color: var(--text-color);
+    color: var(--bg-color);
     text-decoration: none;
     border-radius: var(--border-radius);
     transition: background-color 0.3s ease;
@@ -263,6 +268,7 @@ body {
 
 .back-button {
     background-color: var(--card-bg);
+    color: var(--text-color);
 }
 
 .next-button {
@@ -271,6 +277,7 @@ body {
 
 .nav-button:hover {
     background-color: var(--hover-color);
+    color: var(--text-color);
 }
 
 /* Footer */
