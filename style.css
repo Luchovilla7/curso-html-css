@@ -224,7 +224,7 @@ body {
 
 .accordion-item.active .accordion-content {
     padding: 2rem;
-    max-height: 2000px;
+    max-height: 5000px;
 }
 
 /* Code Examples */
