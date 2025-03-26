@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Módulo 1 - Fundamentos de HTML</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="animate-title">Semana 1: Fundamentos de HTML</h1>
+            <p class="subtitle">Objetivo: Aprender la estructura básica de HTML y cómo funciona en la web.</p>
+            <div class="header-decoration"></div>
+        </header>
+
+        <main class="main-content">
+            <div class="accordion">
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        <span class="emoji">📌</span> Clase 1: Introducción a HTML y la Web
+                    </button>
+                    <div class="accordion-content">
+                        <ul>
+                            <li>
+                                <h3>¿Qué es HTML y cómo funciona?</h3>
+                                <p>HTML (HyperText Markup Language) es el lenguaje fundamental de la web que define la estructura y el contenido de las páginas web. Funciona mediante un sistema de etiquetas que el navegador interpreta para mostrar el contenido al usuario.</p>
+                                <div class="code-example">
+                                    <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Mi primera página&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;¡Hola Mundo!&lt;/h1&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                                </div>
+                            </li>
+                            <li>
+                                <h3>Estructura básica de una página web</h3>
+                                <p>Toda página web tiene una estructura jerárquica básica:</p>
+                                <ul class="nested-list">
+                                    <li><strong>DOCTYPE:</strong> Declara la versión de HTML (HTML5)</li>
+                                    <li><strong>html:</strong> Elemento raíz que contiene toda la página</li>
+                                    <li><strong>head:</strong> Contiene metadatos, títulos y enlaces a recursos</li>
+                                    <li><strong>body:</strong> Contiene el contenido visible de la página</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <h3>Etiquetas esenciales</h3>
+                                <p>Las etiquetas básicas de HTML incluyen:</p>
+                                <div class="tags-grid">
+                                    <div class="tag-item">
+                                        <code>&lt;html&gt;</code>
+                                        <p>Define el documento HTML</p>
+                                    </div>
+                                    <div class="tag-item">
+                                        <code>&lt;head&gt;</code>
+                                        <p>Contiene metadatos y recursos</p>
+                                    </div>
+                                    <div class="tag-item">
+                                        <code>&lt;body&gt;</code>
+                                        <p>Contiene el contenido visible</p>
+                                    </div>
+                                    <div class="tag-item">
+                                        <code>&lt;meta&gt;</code>
+                                        <p>Define metadatos como charset y viewport</p>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/85ahlJzTUYE?si=Pkrvx-mZ4GPgLnPY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        <p>Descarga aquí el <a href="https://code.visualstudio.com/" target="_blank">Visual Studio Code</a></p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        <span class="emoji">📌</span> Clase 2: Textos, Listas y Enlaces
+                    </button>
+                    <div class="accordion-content">
+                        <ul>
+                            <li>
+                                <h3>Etiquetas de texto</h3>
+                                <p>HTML proporciona una variedad de etiquetas para formatear texto:</p>
+                                <div class="code-example">
+                                    <pre><code>&lt;h1&gt;Encabezado Principal&lt;/h1&gt;
+&lt;h2&gt;Subencabezado&lt;/h2&gt;
+&lt;p&gt;Párrafo de texto&lt;/p&gt;
+&lt;strong&gt;Texto importante&lt;/strong&gt;
+&lt;em&gt;Texto enfatizado&lt;/em&gt;</code></pre>
+                                </div>
+                                <p>Los encabezados van desde h1 (más importante) hasta h6 (menos importante).</p>
+                            </li>
+                            <li>
+                                <h3>Listas</h3>
+                                <p>HTML ofrece tres tipos principales de listas:</p>
+                                <div class="code-example">
+                                    <pre><code><!-- Lista ordenada -->
+&lt;ol&gt;
+    &lt;li&gt;Primer elemento&lt;/li&gt;
+    &lt;li&gt;Segundo elemento&lt;/li&gt;
+&lt;/ol&gt;
+
+<!-- Lista no ordenada -->
+&lt;ul&gt;
+    &lt;li&gt;Elemento&lt;/li&gt;
+    &lt;li&gt;Otro elemento&lt;/li&gt;
+&lt;/ul&gt;
+
+<!-- Lista de definición -->
+&lt;dl&gt;
+    &lt;dt&gt;Término&lt;/dt&gt;
+    &lt;dd&gt;Definición&lt;/dd&gt;
+&lt;/dl&gt;</code></pre>
+                                </div>
+                            </li>
+                            <li>
+                                <h3>Enlaces</h3>
+                                <p>Los enlaces son fundamentales para la navegación web:</p>
+                                <div class="code-example">
+                                    <pre><code>&lt;!-- Enlace básico -->
+&lt;a href="https://ejemplo.com"&gt;Visitar sitio&lt;/a&gt;
+
+&lt;!-- Enlace que abre en nueva pestaña -->
+&lt;a href="https://ejemplo.com" target="_blank"&gt;Abrir en nueva pestaña&lt;/a&gt;
+
+&lt;!-- Enlace a correo electrónico -->
+&lt;a href="mailto:correo@ejemplo.com"&gt;Enviar email&lt;/a&gt;</code></pre>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        <span class="emoji">📌</span> Clase 3: Imágenes, Tablas y Formularios
+                    </button>
+                    <div class="accordion-content">
+                        <ul>
+                            <li>
+                                <h3>Imágenes</h3>
+                                <p>Las imágenes se insertan usando la etiqueta img:</p>
+                                <div class="code-example">
+                                    <pre><code>&lt;!-- Imagen básica -->
+&lt;img src="imagen.jpg" alt="Descripción de la imagen"&gt;
+
+&lt;!-- Imagen con dimensiones -->
+&lt;img src="imagen.jpg" alt="Descripción" width="300" height="200"&gt;
+
+&lt;!-- Imagen responsive -->
+&lt;img src="imagen.jpg" alt="Descripción" style="max-width: 100%; height: auto"&gt;</code></pre>
+                                </div>
+                            </li>
+                            <li>
+                                <h3>Tablas</h3>
+                                <p>Las tablas se utilizan para mostrar datos tabulares:</p>
+                                <div class="code-example">
+                                    <pre><code>&lt;table&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;Encabezado 1&lt;/th&gt;
+            &lt;th&gt;Encabezado 2&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Dato 1&lt;/td&gt;
+            &lt;td&gt;Dato 2&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+                                </div>
+                            </li>
+                            <li>
+                                <h3>Formularios</h3>
+                                <p>Los formularios permiten la interacción con el usuario:</p>
+                                <div class="code-example">
+                                    <pre><code>&lt;form action="/enviar" method="POST"&gt;
+    &lt;label for="nombre"&gt;Nombre:&lt;/label&gt;
+    &lt;input type="text" id="nombre" name="nombre" required&gt;
+
+    &lt;label for="email"&gt;Email:&lt;/label&gt;
+    &lt;input type="email" id="email" name="email" required&gt;
+
+    &lt;label for="mensaje"&gt;Mensaje:&lt;/label&gt;
+    &lt;textarea id="mensaje" name="mensaje"&gt;&lt;/textarea&gt;
+
+    &lt;button type="submit"&gt;Enviar&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="navigation-buttons">
+                <a href="index.html" class="nav-button back-button">← Volver al Inicio</a>
+                <a href="#" class="nav-button next-button">Siguiente Módulo →</a>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        document.querySelectorAll('.accordion-header').forEach(button => {
+            button.addEventListener('click', () => {
+                const accordionItem = button.parentElement;
+                accordionItem.classList.toggle('active');
+                
+                document.querySelectorAll('.accordion-item').forEach(item => {
+                    if (item !== accordionItem) {
+                        item.classList.remove('active');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
