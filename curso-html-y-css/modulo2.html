@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Módulo 2 - Estilizando con CSS</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="animate-title">Semana 2: Estilizando con CSS</h1>
+            <p class="subtitle">Objetivo: Aplicar estilos CSS y mejorar el diseño de una página web.</p>
+            <div class="header-decoration"></div>
+        </header>
+
+        <main class="main-content">
+            <div class="accordion">
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        <span class="emoji">📌</span> Clase 4: Introducción a CSS
+                    </button>
+                    <div class="accordion-content">
+                        <ul>
+                            <li>
+                                <h3>¿Qué es CSS y cómo aplicarlo?</h3>
+                                <p>CSS (Cascading Style Sheets) es un lenguaje que describe la presentación de documentos HTML. Hay tres formas de aplicar CSS:</p>
+                                
+                                <h4>1. CSS Inline</h4>
+                                <div class="code-example">
+                                    <pre><code>&lt;p style="color: blue; font-size: 16px;"&gt;Texto con estilo inline&lt;/p&gt;</code></pre>
+                                </div>
+
+                                <h4>2. CSS Internal (en el head)</h4>
+                                <div class="code-example">
+                                    <pre><code>&lt;head&gt;
+  &lt;style&gt;
+    p {
+      color: blue;
+      font-size: 16px;
+    }
+  &lt;/style&gt;
+&lt;/head&gt;</code></pre>
+                                </div>
+
+                                <h4>3. CSS External (archivo separado)</h4>
+                                <div class="code-example">
+                                    <pre><code>&lt;head&gt;
+  &lt;link rel="stylesheet" href="styles.css"&gt;
+&lt;/head&gt;
+
+/* styles.css */
+p {
+  color: blue;
+  font-size: 16px;
+}</code></pre>
+                                </div>
+                            </li>
+                            <li>
+                                <h3>Selectores básicos</h3>
+                                <p>Los selectores CSS determinan qué elementos HTML serán estilizados:</p>
+                                <div class="code-example">
+                                    <pre><code>/* Selector de elemento */
+p {
+  color: blue;
+}
+
+/* Selector de clase */
+.destacado {
+  font-weight: bold;
+  color: #ff6b6b;
+}
+
+/* Selector de ID */
+#header {
+  background-color: #333;
+}
+
+/* Selector descendente */
+.container p {
+  margin: 10px 0;
+}
+
+/* Selector de atributo */
+input[type="text"] {
+  border: 1px solid #ddd;
+}
+
+/* Pseudo-clases */
+a:hover {
+  color: red;
+}</code></pre>
+                                </div>
+                            </li>
+                            <li>
+                                <h3>Propiedades de color, fuentes y fondo</h3>
+                                <div class="code-example">
+                                    <pre><code>/* Colores */
+.elemento {
+  color: #ff6b6b;              /* Color de texto hexadecimal */
+  color: rgb(255, 107, 107);   /* Color RGB */
+  color: rgba(255, 107, 107, 0.5); /* Color RGB con transparencia */
+}
+
+/* Fuentes */
+body {
+  font-family: 'Arial', sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 1.5;
+  letter-spacing: 1px;
+}
+
+/* Fondos */
+.hero {
+  background-color: #f8f9fa;
+  background-image: url('imagen.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}</code></pre>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        <span class="emoji">📌</span> Clase 5: Box Model y Posicionamiento
+                    </button>
+                    <div class="accordion-content">
+                        <ul>
+                            <li>
+                                <h3>Box Model</h3>
+                                <p>El Box Model define cómo se estructuran dimensionalmente los elementos HTML:</p>
+                                <div class="code-example">
+                                    <pre><code>.elemento {
+  /* Dimensiones del contenido */
+  width: 300px;
+  height: 200px;
+
+  /* Padding (espacio interno) */
+  padding: 20px;           /* Todos los lados */
+  padding: 10px 20px;      /* vertical horizontal */
+  padding: 10px 20px 15px 25px; /* arriba derecha abajo izquierda */
+
+  /* Border */
+  border: 2px solid #333;
+  border-radius: 8px;
+  
+  /* Margin (espacio externo) */
+  margin: 20px;
+  margin: 10px auto;       /* centrado horizontal */
+}
+
+/* Box-sizing */
+* {
+  box-sizing: border-box; /* Incluye padding y border en width/height */
+}</code></pre>
+                                </div>
+                            </li>
+                            <li>
+                                <h3>Posicionamiento</h3>
+                                <p>CSS ofrece diferentes métodos de posicionamiento:</p>
+                                <div class="code-example">
+                                    <pre><code>/* Static (por defecto) */
+.elemento-static {
+  position: static;
+}
+
+/* Relative (relativo a su posición normal) */
+.elemento-relative {
+  position: relative;
+  top: 20px;
+  left: 20px;
+}
+
+/* Absolute (relativo al ancestro posicionado más cercano) */
+.elemento-absolute {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+/* Fixed (relativo al viewport) */
+.elemento-fixed {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
+/* Sticky (híbrido entre relative y fixed) */
+.elemento-sticky {
+  position: sticky;
+  top: 0;
+}</code></pre>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        <span class="emoji">📌</span> Clase 6: Diseño Responsive con Media Queries
+                    </button>
+                    <div class="accordion-content">
+                        <ul>
+                            <li>
+                                <h3>Unidades de medida en CSS</h3>
+                                <div class="code-example">
+                                    <pre><code>/* Unidades absolutas */
+.elemento {
+  width: 100px;    /* píxeles */
+  margin: 1in;     /* pulgadas */
+  padding: 1cm;    /* centímetros */
+}
+
+/* Unidades relativas */
+.elemento {
+  font-size: 1.5em;    /* relativo al tamaño de fuente del padre */
+  margin: 2rem;        /* relativo al tamaño de fuente del root */
+  width: 50%;         /* porcentaje del contenedor */
+  height: 100vh;      /* viewport height */
+  width: 100vw;       /* viewport width */
+}</code></pre>
+                                </div>
+                            </li>
+                            <li>
+                                <h3>Media Queries</h3>
+                                <p>Las media queries permiten aplicar estilos según características del dispositivo:</p>
+                                <div class="code-example">
+                                    <pre><code>/* Estilos base para móvil primero */
+.container {
+  width: 100%;
+  padding: 15px;
+}
+
+/* Tablet (768px y superior) */
+@media screen and (min-width: 768px) {
+  .container {
+    width: 750px;
+    margin: 0 auto;
+  }
+  
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+
+/* Desktop (1024px y superior) */
+@media screen and (min-width: 1024px) {
+  .container {
+    width: 1000px;
+  }
+  
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Orientación */
+@media (orientation: landscape) {
+  .sidebar {
+    width: 30%;
+    float: left;
+  }
+}
+
+/* Preferencias de usuario */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #333;
+    color: #fff;
+  }
+}</code></pre>
+                                </div>
+                            </li>
+                            <li>
+                                <h3>Ejemplo de diseño responsive completo</h3>
+                                <div class="code-example">
+                                    <pre><code>/* Estructura base responsive */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.nav {
+  width: 100%;
+}
+
+.grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 1fr;
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+  .header {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  
+  .nav {
+    width: auto;
+  }
+  
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .main-content {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 40px;
+  }
+}</code></pre>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="navigation-buttons">
+                <a href="modulo1.html" class="nav-button back-button">← Módulo Anterior</a>
+                <a href="#" class="nav-button next-button">Siguiente Módulo →</a>
+            </div>
+        </main>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Contacto</h4>
+                <p>📧 info@cursohtml.com</p>
+                <p>📱 +1234567890</p>
+            </div>
+            <div class="footer-section">
+                <h4>Síguenos</h4>
+                <div class="social-links">
+                    <a href="#" class="social-link">Instagram</a>
+                    <a href="#" class="social-link">Twitter</a>
+                    <a href="#" class="social-link">LinkedIn</a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>Legal</h4>
+                <a href="#" class="footer-link">Términos y Condiciones</a>
+                <a href="#" class="footer-link">Política de Privacidad</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Luciano Villalba. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelectorAll('.accordion-header').forEach(button => {
+            button.addEventListener('click', () => {
+                const accordionItem = button.parentElement;
+                accordionItem.classList.toggle('active');
+                
+                document.querySelectorAll('.accordion-item').forEach(item => {
+                    if (item !== accordionItem) {
+                        item.classList.remove('active');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
