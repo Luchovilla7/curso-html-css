@@ -210,6 +210,63 @@ header .container {
     margin-right: 0.5rem;
 }
 
+/* Courses */
+
+.courses-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.course-card {
+    background: var(--card-bg);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.course-card:hover {
+    transform: translateY(-5px);
+}
+
+.course-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.course-card h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.course-card p {
+    font-size: 1em;
+    color: var(--text-color);
+    margin-bottom: 15px;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background: var(--primary-color);
+    color: var(--bg-color);
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.cta-button:hover {
+    background: var(--hover-color);
+    color: var(--text-color);
+}
+
 /* Accordion */
 .accordion {
     max-width: 800px;
@@ -415,6 +472,7 @@ iframe {
     }
 
     iframe {
-        max-width: 100%;
+        width: 100%;
+        height: auto;
     }
 }
