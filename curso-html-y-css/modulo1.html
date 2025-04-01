@@ -174,7 +174,7 @@
 
                 <div class="accordion-item">
                     <button class="accordion-header">
-                        <span class="emoji">📌</span> Clase 3: Imágenes, Tablas y Formularios
+                        <span class="emoji">📌</span> Clase 3: Imágenes, Videos, Iframes, Tablas y Formularios
                     </button>
                     <div class="accordion-content">
                         <ul>
@@ -183,13 +183,31 @@
                                 <p>Las imágenes se insertan usando la etiqueta img:</p>
                                 <div class="code-example">
                                     <pre><code>&lt;!-- Imagen básica -->
-&lt;img src="imagen.jpg" alt="Descripción de la imagen"&gt;
-
-&lt;!-- Imagen con dimensiones -->
-&lt;img src="imagen.jpg" alt="Descripción" width="300" height="200"&gt;
-
-&lt;!-- Imagen responsive -->
-&lt;img src="imagen.jpg" alt="Descripción" style="max-width: 100%; height: auto"&gt;</code></pre>
+                &lt;img src="imagen.jpg" alt="Descripción de la imagen"&gt;
+                
+                &lt;!-- Imagen con dimensiones -->
+                &lt;img src="imagen.jpg" alt="Descripción" width="300" height="200"&gt;
+                
+                &lt;!-- Imagen responsive -->
+                &lt;img src="imagen.jpg" alt="Descripción" style="max-width: 100%; height: auto"&gt;</code></pre>
+                                </div>
+                            </li>
+                            <li>
+                                <h3>Videos</h3>
+                                <p>Los videos pueden incorporarse de forma local utilizando la etiqueta video:</p>
+                                <div class="code-example">
+                                    <pre><code>
+&lt;video width="640" height="360" controls src="video.mp4" type="video/mp4"&gt;
+    Tu navegador no soporta el elemento de video.
+&lt;/video&gt;</code></pre>
+                                </div>
+                            </li>
+                            <li>
+                                <h3>Iframes</h3>
+                                <p>Los iframes permiten incrustar contenido de otros sitios web dentro de nuestra página:</p>
+                                <div class="code-example">
+                                    <pre><code>
+&lt;iframe src="https://www.ejemplo.com" width="600" height="400" style="border:0;" allowfullscreen&gt;&lt;/iframe&gt;</code></pre>
                                 </div>
                             </li>
                             <li>
@@ -197,19 +215,19 @@
                                 <p>Las tablas se utilizan para mostrar datos tabulares:</p>
                                 <div class="code-example">
                                     <pre><code>&lt;table&gt;
-    &lt;thead&gt;
-        &lt;tr&gt;
-            &lt;th&gt;Encabezado 1&lt;/th&gt;
-            &lt;th&gt;Encabezado 2&lt;/th&gt;
-        &lt;/tr&gt;
-    &lt;/thead&gt;
-    &lt;tbody&gt;
-        &lt;tr&gt;
-            &lt;td&gt;Dato 1&lt;/td&gt;
-            &lt;td&gt;Dato 2&lt;/td&gt;
-        &lt;/tr&gt;
-    &lt;/tbody&gt;
-&lt;/table&gt;</code></pre>
+                    &lt;thead&gt;
+                        &lt;tr&gt;
+                            &lt;th&gt;Encabezado 1&lt;/th&gt;
+                            &lt;th&gt;Encabezado 2&lt;/th&gt;
+                        &lt;/tr&gt;
+                    &lt;/thead&gt;
+                    &lt;tbody&gt;
+                        &lt;tr&gt;
+                            &lt;td&gt;Dato 1&lt;/td&gt;
+                            &lt;td&gt;Dato 2&lt;/td&gt;
+                        &lt;/tr&gt;
+                    &lt;/tbody&gt;
+                &lt;/table&gt;</code></pre>
                                 </div>
                             </li>
                             <li>
@@ -217,23 +235,24 @@
                                 <p>Los formularios permiten la interacción con el usuario:</p>
                                 <div class="code-example">
                                     <pre><code>&lt;form action="/enviar" method="POST"&gt;
-    &lt;label for="nombre"&gt;Nombre:&lt;/label&gt;
-    &lt;input type="text" id="nombre" name="nombre" required&gt;
-
-    &lt;label for="email"&gt;Email:&lt;/label&gt;
-    &lt;input type="email" id="email" name="email" required&gt;
-
-    &lt;label for="mensaje"&gt;Mensaje:&lt;/label&gt;
-    &lt;textarea id="mensaje" name="mensaje"&gt;&lt;/textarea&gt;
-
-    &lt;button type="submit"&gt;Enviar&lt;/button&gt;
-&lt;/form&gt;</code></pre>
+                    &lt;label for="nombre"&gt;Nombre:&lt;/label&gt;
+                    &lt;input type="text" id="nombre" name="nombre" required&gt;
+                
+                    &lt;label for="email"&gt;Email:&lt;/label&gt;
+                    &lt;input type="email" id="email" name="email" required&gt;
+                
+                    &lt;label for="mensaje"&gt;Mensaje:&lt;/label&gt;
+                    &lt;textarea id="mensaje" name="mensaje"&gt;&lt;/textarea&gt;
+                
+                    &lt;button type="submit"&gt;Enviar&lt;/button&gt;
+                &lt;/form&gt;</code></pre>
                                 </div>
                             </li>
                         </ul>
                         <iframe width="560" height="315" src="https://www.youtube.com/embed/gz46iCCRtHI?si=AvqiuX6rxRuFK9Mq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                     </div>
                 </div>
+                
             </div>
 
             <div class="navigation-buttons">
