@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Módulo 3 - Flexbox, Grid y Diseño Avanzado</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="animate-title">Módulo 3: Diseño Responsive y Estilos Avanzados</h1>
+            <p class="subtitle">Objetivo: Aprender a estructurar y alinear elementos con Flexbox y Grid.</p>
+            <div class="header-decoration"></div>
+        </header>
+
+        <main class="main-content">
+            <div class="accordion">
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        <span class="emoji">📌</span> Clase 8: Diseño Responsive con Media Queries
+                    </button>
+                    <div class="accordion-content">
+                        <ul>
+                            <li>
+                                <h3>Unidades de medida en CSS</h3>
+                                <div class="code-example">
+                                    <pre><code>/* Unidades absolutas */
+.elemento {
+  width: 100px;    /* píxeles */
+  margin: 1in;     /* pulgadas */
+  padding: 1cm;    /* centímetros */
+}
+
+/* Unidades relativas */
+.elemento {
+  font-size: 1.5em;    /* relativo al tamaño de fuente del padre */
+  margin: 2rem;        /* relativo al tamaño de fuente del root */
+  width: 50%;         /* porcentaje del contenedor */
+  height: 100vh;      /* viewport height */
+  width: 100vw;       /* viewport width */
+}</code></pre>
+                                </div>
+                            </li>
+                            <li>
+                                <h3>Media Queries</h3>
+                                <p>Las media queries permiten aplicar estilos según características del dispositivo:</p>
+                                <div class="code-example">
+                                    <pre><code>/* Estilos base para móvil primero */
+.container {
+  width: 100%;
+  padding: 15px;
+}
+
+/* Tablet (768px y superior) */
+@media screen and (min-width: 768px) {
+  .container {
+    width: 750px;
+    margin: 0 auto;
+  }
+  
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+
+/* Desktop (1024px y superior) */
+@media screen and (min-width: 1024px) {
+  .container {
+    width: 1000px;
+  }
+  
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Orientación */
+@media (orientation: landscape) {
+  .sidebar {
+    width: 30%;
+    float: left;
+  }
+}
+
+/* Preferencias de usuario */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #333;
+    color: #fff;
+  }
+}</code></pre>
+                                </div>
+                            </li>
+                            <li>
+                              <h3>Media Queries</h3>
+                              <p>Las media queries permiten aplicar estilos según características del dispositivo:</p>
+                              <div class="code-example">
+                                  <pre><code>/* Estilos base para pantallas grandes (desktop) */
+.container {
+  width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+/* Tablet (hasta 1024px) */
+@media screen and (max-width: 1024px) {
+  .container {
+    width: 750px;
+  }
+
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Móvil (hasta 768px) */
+@media screen and (max-width: 768px) {
+  .container {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Orientación horizontal */
+@media (orientation: landscape) {
+  .sidebar {
+    width: 30%;
+    float: left;
+  }
+}
+
+/* Modo oscuro */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #111;
+    color: #eee;
+  }
+
+  .container {
+    background-color: #222;
+  }
+}
+</code></pre>
+                              </div>
+                          </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        <span class="emoji">📌</span> Clase 9: Componentes UI y Animaciones
+                    </button>
+                    <div class="accordion-content">
+                        <ul>
+                            <li>
+                                <h3>Componentes UI Modernos</h3>
+                                <div class="code-example">
+                                    <pre><code>/* Botón Moderno */
+.button {
+  padding: 12px 24px;
+  background: linear-gradient(45deg, #6366f1, #4f46e5);
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-weight: 600;
+  transition: transform 0.3s ease;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+}
+
+/* Card con Sombra */
+.card {
+  background: white;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Menú Desplegable */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+  pointer-events: none;
+}
+
+.dropdown:hover .dropdown-content {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}</code></pre>
+                                </div>
+                            </li>
+                            <li>
+                                <h3>Animaciones y Transiciones</h3>
+                                <div class="code-example">
+                                    <pre><code>/* Transiciones */
+.elemento {
+  transition: all 0.3s ease;
+  /* Propiedades específicas */
+  transition: transform 0.3s ease,
+              opacity 0.3s ease-in-out,
+              background-color 0.3s linear;
+}
+
+/* Keyframe Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+.animated-element {
+  animation: fadeIn 0.5s ease-out,
+             pulse 2s infinite;
+}</code></pre>
+                                </div>
+                            </li>
+                            <li>
+                                <h3>Ejemplo Práctico: Componente Animado</h3>
+                                <div class="code-example">
+                                    <pre><code>/* HTML */
+&lt;div class="notification"&gt;
+  &lt;div class="notification-icon"&gt;🔔&lt;/div&gt;
+  &lt;div class="notification-content"&gt;
+    &lt;h4&gt;Nuevo mensaje&lt;/h4&gt;
+    &lt;p&gt;Has recibido una notificación&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+/* CSS */
+.notification {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  animation: slideIn 0.5s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.notification-icon {
+  font-size: 1.5rem;
+  animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}</code></pre>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="navigation-buttons">
+                <a href="modulo2.html" class="nav-button back-button">← Módulo Anterior</a>
+                <a href="modulo4.html" class="nav-button next-button">Siguiente Módulo →</a>
+            </div>
+        </main>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2025 Luciano Villalba. Todos los derechos reservados.</p>
+    </div>
+
+    <script>
+        document.querySelectorAll('.accordion-header').forEach(button => {
+            button.addEventListener('click', () => {
+                const accordionItem = button.parentElement;
+                accordionItem.classList.toggle('active');
+                
+                document.querySelectorAll('.accordion-item').forEach(item => {
+                    if (item !== accordionItem) {
+                        item.classList.remove('active');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

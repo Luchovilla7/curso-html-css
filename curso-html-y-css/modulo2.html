@@ -9,7 +9,7 @@
 <body>
     <div class="container">
         <header class="header">
-            <h1 class="animate-title">Semana 2: Estilizando con CSS</h1>
+            <h1 class="animate-title">Módulo 2: Estilizando con CSS</h1>
             <p class="subtitle">Objetivo: Aplicar estilos CSS y mejorar el diseño de una página web.</p>
             <div class="header-decoration"></div>
         </header>
@@ -199,181 +199,207 @@ body {
                                 </div>
                             </li>
                         </ul>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/oJTEi9HQ2qE?si=FD-ckOSSUM_dy2Nc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                     </div>
                 </div>
-
                 <div class="accordion-item">
-                    <button class="accordion-header">
-                        <span class="emoji">📌</span> Clase 6: Diseño Responsive con Media Queries
-                    </button>
-                    <div class="accordion-content">
-                        <ul>
-                            <li>
-                                <h3>Unidades de medida en CSS</h3>
-                                <div class="code-example">
-                                    <pre><code>/* Unidades absolutas */
-.elemento {
-  width: 100px;    /* píxeles */
-  margin: 1in;     /* pulgadas */
-  padding: 1cm;    /* centímetros */
-}
-
-/* Unidades relativas */
-.elemento {
-  font-size: 1.5em;    /* relativo al tamaño de fuente del padre */
-  margin: 2rem;        /* relativo al tamaño de fuente del root */
-  width: 50%;         /* porcentaje del contenedor */
-  height: 100vh;      /* viewport height */
-  width: 100vw;       /* viewport width */
-}</code></pre>
-                                </div>
-                            </li>
-                            <li>
-                                <h3>Media Queries</h3>
-                                <p>Las media queries permiten aplicar estilos según características del dispositivo:</p>
-                                <div class="code-example">
-                                    <pre><code>/* Estilos base para móvil primero */
+                  <button class="accordion-header">
+                      <span class="emoji">📌</span> Clase 6: Flexbox - Distribución y Alineación
+                  </button>
+                  <div class="accordion-content">
+                      <ul>
+                          <li>
+                              <h3>Conceptos Básicos de Flexbox</h3>
+                              <p>Flexbox es un modelo de diseño unidimensional para distribuir y alinear elementos en filas o columnas.</p>
+                              <div class="code-example">
+                                  <pre><code>/* Contenedor Flex básico */
 .container {
-  width: 100%;
-  padding: 15px;
+display: flex;
+flex-wrap: wrap; /* Permite que los elementos se envuelvan */
 }
 
-/* Tablet (768px y superior) */
-@media screen and (min-width: 768px) {
-  .container {
-    width: 750px;
-    margin: 0 auto;
-  }
-  
-  .grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-  }
-}
-
-/* Desktop (1024px y superior) */
-@media screen and (min-width: 1024px) {
-  .container {
-    width: 1000px;
-  }
-  
-  .grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-/* Orientación */
-@media (orientation: landscape) {
-  .sidebar {
-    width: 30%;
-    float: left;
-  }
-}
-
-/* Preferencias de usuario */
-@media (prefers-color-scheme: dark) {
-  body {
-    background-color: #333;
-    color: #fff;
-  }
-}</code></pre>
-                                </div>
-                            </li>
-                            <li>
-                                <h3>Ejemplo de diseño responsive completo</h3>
-                                <div class="code-example">
-                                    <pre><code>/* Estructura base responsive */
+/* Dirección del flujo */
 .container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
+flex-direction: row;         /* Por defecto: izquierda a derecha */
+flex-direction: row-reverse; /* Derecha a izquierda */
+flex-direction: column;      /* Arriba a abajo */
+flex-direction: column-reverse; /* Abajo a arriba */
+}</code></pre>
+                              </div>
+                          </li>
+                          <li>
+                              <h3>Alineación y Distribución</h3>
+                              <div class="code-example">
+                                  <pre><code>/* Alineación horizontal (justify-content) */
+.container {
+justify-content: flex-start;    /* Inicio */
+justify-content: flex-end;      /* Final */
+justify-content: center;        /* Centro */
+justify-content: space-between; /* Espacio entre elementos */
+justify-content: space-around;  /* Espacio alrededor */
+justify-content: space-evenly;  /* Espacio uniforme */
 }
 
-.header {
-  display: flex;
+/* Alineación vertical (align-items) */
+.container {
+align-items: stretch;      /* Por defecto */
+align-items: flex-start;   /* Inicio */
+align-items: flex-end;     /* Final */
+align-items: center;       /* Centro */
+align-items: baseline;     /* Línea base del texto */
+}</code></pre>
+                              </div>
+                          </li>
+                          <li>
+                              <h3>Ejemplo Práctico: Navbar con Flexbox</h3>
+                              <div class="code-example">
+                                  <pre><code>/* HTML */
+&lt;nav class="navbar"&gt;
+&lt;div class="logo"&gt;Logo&lt;/div&gt;
+&lt;ul class="nav-links"&gt;
+  &lt;li&gt;&lt;a href="#"&gt;Inicio&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#"&gt;Servicios&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#"&gt;Contacto&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/nav&gt;
+
+/* CSS */
+.navbar {
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 1rem 2rem;
+background-color: #333;
+}
+
+.nav-links {
+display: flex;
+gap: 2rem;
+list-style: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+.navbar {
   flex-direction: column;
-  align-items: center;
-  padding: 20px;
+  gap: 1rem;
 }
-
-.nav {
-  width: 100%;
-}
-
-.grid {
-  display: grid;
-  gap: 20px;
-  grid-template-columns: 1fr;
-}
-
-/* Tablet */
-@media (min-width: 768px) {
-  .header {
-    flex-direction: row;
-    justify-content: space-between;
-  }
-  
-  .nav {
-    width: auto;
-  }
-  
-  .grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-/* Desktop */
-@media (min-width: 1024px) {
-  .grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-  
-  .main-content {
-    display: grid;
-    grid-template-columns: 3fr 1fr;
-    gap: 40px;
-  }
 }</code></pre>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
+                              </div>
+                          </li>
+                      </ul>
+                  </div>
+              </div>
+              <div class="accordion-item">
+                <button class="accordion-header">
+                    <span class="emoji">📌</span> Clase 7: CSS Grid - Creando Layouts Modernos
+                </button>
+                <div class="accordion-content">
+                    <ul>
+                        <li>
+                            <h3>Fundamentos de CSS Grid</h3>
+                            <p>CSS Grid es un sistema de diseño bidimensional que permite crear layouts complejos de manera sencilla.</p>
+                            <div class="code-example">
+                                <pre><code>/* Grid Container básico */
+.grid {
+display: grid;
+grid-template-columns: repeat(3, 1fr); /* 3 columnas iguales */
+grid-template-rows: auto;
+gap: 20px; /* Espacio entre elementos */
+}
+
+/* Áreas de Grid */
+.grid {
+grid-template-areas:
+"header header header"
+"sidebar main main"
+"footer footer footer";
+}
+
+.header { grid-area: header; }
+.sidebar { grid-area: sidebar; }
+.main { grid-area: main; }
+.footer { grid-area: footer; }</code></pre>
+                            </div>
+                        </li>
+                        <li>
+                            <h3>Propiedades Avanzadas de Grid</h3>
+                            <div class="code-example">
+                                <pre><code>/* Patrones de Grid */
+.grid {
+/* Columnas automáticas con mínimo y máximo */
+grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+/* Filas con altura mínima */
+grid-auto-rows: minmax(100px, auto);
+
+/* Alineación de elementos */
+justify-items: center;
+align-items: center;
+}
+
+/* Posicionamiento de elementos */
+.item {
+grid-column: span 2; /* Ocupa 2 columnas */
+grid-row: 1 / 3;    /* De línea 1 a 3 */
+}</code></pre>
+                            </div>
+                        </li>
+                        <li>
+                            <h3>Ejemplo Práctico: Layout Moderno</h3>
+                            <div class="code-example">
+                                <pre><code>/* HTML */
+&lt;div class="layout"&gt;
+&lt;header class="header"&gt;Header&lt;/header&gt;
+&lt;nav class="nav"&gt;Navigation&lt;/nav&gt;
+&lt;main class="main"&gt;Main Content&lt;/main&gt;
+&lt;aside class="sidebar"&gt;Sidebar&lt;/aside&gt;
+&lt;footer class="footer"&gt;Footer&lt;/footer&gt;
+&lt;/div&gt;
+
+/* CSS */
+.layout {
+display: grid;
+grid-template-columns: repeat(4, 1fr);
+grid-template-rows: auto;
+gap: 20px;
+grid-template-areas:
+"header header header header"
+"nav    main   main   sidebar"
+"footer footer footer footer";
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+.layout {
+grid-template-columns: 1fr;
+grid-template-areas:
+  "header"
+  "nav"
+  "main"
+  "sidebar"
+  "footer";
+}
+}</code></pre>
+                            </div>
+                        </li>
+                    </ul>
                 </div>
             </div>
 
+
             <div class="navigation-buttons">
                 <a href="modulo1.html" class="nav-button back-button">← Módulo Anterior</a>
-                <a href="#" class="nav-button next-button">Siguiente Módulo →</a>
+                <a href="modulo3.html" class="nav-button next-button">Siguiente Módulo →</a>
             </div>
         </main>
     </div>
 
-    <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-section">
-                <h4>Contacto</h4>
-                <p>📧 info@cursohtml.com</p>
-                <p>📱 +1234567890</p>
-            </div>
-            <div class="footer-section">
-                <h4>Síguenos</h4>
-                <div class="social-links">
-                    <a href="#" class="social-link">Instagram</a>
-                    <a href="#" class="social-link">Twitter</a>
-                    <a href="#" class="social-link">LinkedIn</a>
-                </div>
-            </div>
-            <div class="footer-section">
-                <h4>Legal</h4>
-                <a href="#" class="footer-link">Términos y Condiciones</a>
-                <a href="#" class="footer-link">Política de Privacidad</a>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2025 Luciano Villalba. Todos los derechos reservados.</p>
-        </div>
-    </footer>
+   
+    <div class="footer-bottom">
+        <p>&copy; 2025 Luciano Villalba. Todos los derechos reservados.</p>
+    </div>
+   
 
     <script>
         document.querySelectorAll('.accordion-header').forEach(button => {
